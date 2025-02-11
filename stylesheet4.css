@@ -1,0 +1,296 @@
+/*Submit Page*/
+* {
+    padding: 0; /*Remove default padding*/
+    margin: 0; /*Remove default margin*/
+    box-sizing: border-box; /*Include padding and border in width and height*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Set font family*/
+}
+
+body {
+    width: 100%; /*Set width to 100% of the viewport*/
+    min-height: 100vh; /*Ensure body takes up at least the full viewport height*/
+    color: black; /*Set text color to black*/
+    line-height: 1.6; /*Set line height to 1.6 for better readability*/
+    position: relative; /*Set position to relative for easier positioning of elements*/
+    display: flex; /*Set display to flex for easier layout management*/
+    flex-direction: column; /*Stack elements vertically*/
+}
+
+#backgroundVideo {
+    position: fixed; /*Fix video to the viewport*/
+    top: 0; /*Align to the top*/
+    left: 0; /*Align to the left*/
+    width: 100%; /*Take up the full viewport width*/
+    height: 100%; /*Take up the full viewport height*/
+    object-fit: cover; /*Scale video to cover the viewport*/
+    z-index: -1; /*Place video behind other elements*/
+}
+
+header {
+    height: 60px; /*Set header height*/
+    width: 100%; /*Take up the full viewport width*/
+    background-color: rgba(0, 0, 0, 0.8); /*Semi-transparent black backgroun*/
+    color: aliceblue; /*Set text color to aliceblue*/
+    display: flex; /*Use flexbox for layout*/
+    align-items: center; /*Center vertically*/
+    position: sticky; /*Stick header to the top*/
+    top: 0; /*Align to the top*/
+    z-index: 1000; /*Place header above other elements*/
+}
+
+.container {
+    width: 90%; /*Take up 90% of the viewport width*/
+    max-width: 800; /*Set maximum width*/
+    margin: 0 auto; /*Center horizontally*/
+    display: flex; /*Use flexbox for layout*/
+    align-items: center; /*Center vertically*/
+    justify-content: space-between; /*Space out items evenly*/
+}
+
+.nav-list {
+    display: none; /*Hide navigation list by default*/
+}
+
+.nav-list.active {
+    display: block; /*Show navigation list when active*/
+}
+
+.nav-list li a {
+    color: aliceblue; /*Set link color to aliceblue*/
+    text-decoration: none; /*Remove underline*/
+}
+
+.nav-list li a:visited {
+    color: aliceblue; /*Set visited link color to aliceblue*/
+}
+
+.nav-list li a.active {
+    color: #D4AF37; /*Set active link color to gold*/
+    text-decoration: underline; /*Add underline to active link*/
+    font-weight: bold; /*Make active link bold*/
+}
+
+.nav-list li a:hover {
+    color: #D4AF37; /*Set hover link color to gold*/
+    transform: scale(1.1); /*Scale up on hover*/
+    text-decoration: underline; /*Add underline on hover*/
+}
+
+nav ul li {
+    list-style: none; /*Remove list bullets*/
+    display: inline; /*Display as inline elements*/
+    margin-right: 20px; /*Add space between items*/
+    font-weight: 550; /*Make font weight 550*/
+    transition: color 0.3s ease, transform 0.3s ease; /*Smooth transition for color and transform*/
+}
+
+nav ul li:hover {
+    color: #D4AF37; /*Set hover link color to gold*/
+    transform: scale(1.1); /*Scale up on hover*/
+    text-decoration: underline; /*Add underline on hover*/
+}
+
+.logo {
+    font-size: 24px; /*Set font size to 24px*/
+    font-weight: bold; /*Make font bold*/
+}
+
+.logo a {
+    color: aliceblue; /*Set link color to aliceblue*/
+    text-decoration: none; /*Remove underline*/
+}
+
+.logo a:visited {
+    color: aliceblue; /*Set visited link color to aliceblue*/
+}
+
+.logo a:active, .logo a:hover {
+    color: #D4AF37; /* Set active text color */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8); /*Semi-transparent black background*/
+    padding: 20px 0; /*Add padding to footer*/
+    color: aliceblue; /*Set footer text color to aliceblue*/
+    text-align: center; /*Center footer text*/
+    width: 100%; /*Set footer width to 100%*/
+    z-index: 1; /*Ensure footer stays above the video background*/
+    margin-top: auto; /*Push footer to the bottom of the page*/
+}
+
+.footer-content {
+    max-width: 1200px; /*Set maximum width of footer content*/
+    margin: 0 auto; /*Center footer content*/
+    padding: 0 20px; /*Add padding to footer content*/
+}
+
+.contact-icons {
+    margin-top: 10px; /*Add space between contact icons and footer text*/
+}
+
+.contact-icons a {
+    color: aliceblue; /*Set contact icon text color to aliceblue*/
+    margin: 0 10px; /*Add space between contact icons*/
+    font-size: 24px; /*Set contact icon font size to 24px*/
+    transition: color 0.3s ease, transform 0.3s ease; /*Smooth transition for color and transform*/
+}
+
+.contact-icons a:hover {
+    color: #D4AF37; /*Change icon color to gold on hover*/
+    transform: scale(1.2); /*Scale icon on hover*/
+}
+
+.menu-icon {
+    font-size: 24px; /*Set font size to 24px*/
+    padding: 20px; /*Add padding to icon*/
+    cursor: pointer; /*Change cursor to pointer on hover*/
+    display: block; /*Display as block element*/
+
+}
+
+.submit-recipe {
+    display: flex; /*Display as flexbox*/
+    flex-direction: column; /*Set flex direction to column*/
+    justify-content: center; /*Center content vertically*/
+    align-items: center; /*Center content horizontally*/
+    min-height: 100vh; /*Set minimum height to 100vh*/
+    padding: 20px; /*Add padding to top and bottom*/
+}
+
+.submit-recipe h2 {
+    color: aliceblue; /*Set text color to aliceblue*/
+    font-size: 36px; /*Set font size to 36px*/
+    text-align: center; /*Center text*/
+    margin-bottom: 30px; /*Add margin to bottom*/
+    font-weight: bold; /*Make font bold*/
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*Add text shadow for better visibility*/
+}
+
+.submit-container {
+    width: 90%; /*Set width to 90%*/
+    max-width: 800px; /*Set maximum width to 800px*/
+    margin: 0 auto; /*Center horizontally*/
+}
+
+.recipe-form {
+    max-width: 90%; /*Set maximum width to 90%*/
+    width: 800px; /*Set width to 800px*/
+    margin: 0 auto; /*Center horizontally*/
+    padding: 40px; /*Add padding to top and bottom*/
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /*Set background to semi-transparent linear gradient*/
+    border-radius: 15px; /*Add rounded corners*/
+    backdrop-filter: blur(10px); /*Add blur effect to background*/
+    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.3); /*Add box shadow for depth and better visiblity*/
+}
+
+.form-group {
+    margin-bottom: 30px; /*Add spacing between form groups*/
+}
+
+.form-group label {
+    display: block; /*Display as block element*/
+    margin-bottom: 15px; /*Add spacing below labels*/
+    font-weight: bold; /*Make font bold*/
+    color: aliceblue; /*Set text color to aliceblue*/
+    font-size: 20px; /*Set font size to 20px*/
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /*Set width to 100%*/
+    padding: 15px; /*Add padding to top and bottom*/
+    border: 1px solid aliceblue; /*Set border to aliceblue*/
+    border-radius: 8px; /*Add rounded corners*/
+    background-color: rgba(255, 255, 255, 0.1); /*Set background to semi-transparent*/
+    color: #D4AF37; /*Set text color to gold*/
+    font-size: 18px; /*Set font size to 18px*/
+    margin-bottom: 25px; /*Add spacing below inputs and textareas*/
+    transition: border-color 0.3s ease, background-color 0.3s ease; /*Smooth transition for border and background*/
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #b38f2b; /*Change border color on hover*/
+    background-color: rgba(255, 255, 255, 0.2); /*Change background color on hover*/
+}
+
+.form-group textarea {
+    resize: vertical; /*Allow vertical resizing*/
+    min-height: 150px; /*Set minimum height to 150px for textareas*/
+}
+
+button[type="submit"] {
+    width: 100%; /*Set button width to 100% of the parent*/
+    padding: 15px; /*Add padding to top and bottom*/
+    background-color: #D4AF37; /*Set background color to gold*/
+    color: black; /*Set text color to black*/
+    border: none; /*Remove border*/
+    border-radius: 8px; /*Add rounded corners*/
+    font-size: 20px; /*Set font size to 20px*/
+    font-weight: bold; /*Make font bold*/
+    cursor: pointer; /*Change cursor to pointer on hover*/
+    transition: all 0.3s ease-in-out; /*Smooth transition for all properties*/
+}
+
+button[type="submit"]:hover {
+    background-color: #b38f2b; /*Change background color on hover*/
+}
+
+#scrollDownBtn, #scrollToTopBtn {
+    position: fixed; /*Position scroll down button at the bottom right of the viewport*/
+    right: 20px; /*Position scroll down button 20px from the right of the viewport*/
+    z-index: 1000; /*Set z-index to 1000 to ensure scroll down button is on top of other elements*/
+    padding: 10px 15px; /*Add padding to scroll down button*/
+    font-size: 18px; /*Set font size of scroll down button to 18px*/
+    background-color: #D4AF37; /*Set background color of scroll down button to gold*/
+    color: black; /*Set text color of scroll down button to black*/
+    border: none; /*Remove border from scroll down button*/
+    border-radius: 50%; /*Make scroll down button a circle*/
+    cursor: pointer; /*Change cursor shape on hover*/
+    transition: background-color 0.3s ease, transform 0.3s ease; /*Smooth transition for background color and transform*/
+}
+
+#scrollDownBtn {
+    bottom: 20px; /*Position scroll down button 20px from the bottom of the viewport*/
+}
+
+#scrollToTopBtn {
+    bottom: 80px; /*Position scroll to top button 80px from the bottom of the viewport*/
+    display: none; /*Hide scroll to top button by default*/
+}
+
+#scrollDownBtn:hover, #scrollToTopBtn:hover {
+    background-color: #b38f2b; /*Change background color to darker gold on hover*/
+    transform: scale(1.1); /*Scale scroll down button on hover*/
+}
+
+#recipeModal {
+    display: none;
+}
+
+#recipeModal.show-modal {
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none; /*Hide menu icon on larger screens*/
+    }
+
+    .nav-list {
+        display: flex; /*Display nav list as a flexbox on larger screens*/
+    }
+
+    .recipe-form {
+        padding: 15px; /*Reduce padding to the form on larger screens*/
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px; /*Reduce font size to 14px on larger screens*/
+    }
+
+    button[type="submit"] {
+        font-size: 16px; /*Reduce font size to 16px on larger screens*/
+    }
+}

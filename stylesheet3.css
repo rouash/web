@@ -1,0 +1,241 @@
+/*About Page*/
+* {
+    padding: 0; /*Remove default padding*/
+    margin: 0; /*Remove default margin*/
+    box-sizing: border-box; /*Include padding and border in width and height*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Set font family*/
+}
+
+body {
+    width: 100%; /*Set body width to 100vh of the viewport*/
+    min-height: 100vh; /*Ensure the body takes at least the full viewport height*/
+    background-color: black; /*Set background color to black*/
+    color: aliceblue; /*Set text color to aliceblue*/
+    line-height: 1.6; /*Set line height to 1.6 for better readability*/
+    position: relative; /*Set position to relative for easier positioning of elements*/
+    display: flex; /*Set display to flex for easier layout management*/
+    flex-direction: column; /*Stack elements vertically*/
+}
+
+header {
+    height: 60px; /*Set header height*/
+    width: 100%; /*Set header width to 100vh of the viewport*/
+    background-color: rgba(0, 0, 0, 0.8); /*Set header background color to a dark, semi-transparent color*/
+    color: aliceblue; /*Set text color to aliceblue*/
+    display: flex; /*Use flexbox for layout*/
+    align-items: center; /*Center items vertically*/
+    position: sticky; /*Make the header stick to the top of the viewport*/
+    top: 0; /*Position the header at the top of the viewport*/
+    z-index: 1000; /*Set the header's z-index to ensure it's on top of other elements*/
+}
+
+.container {
+    position: relative; /*Make the container relative to child elements*/
+    z-index: 1; /*Set the container's z-index to ensure it's behind the header*/
+    width: 90%; /*Set container width to 90% of its parent*/
+    margin: 0 auto; /*Center the container horizontally*/
+    display: flex; /*Use flexbox for layout*/
+    align-items: center; /*Center items vertically*/
+    justify-content: space-between; /*Distribute items horizontally with equal space between them*/
+}
+
+.nav-list {
+    display: none; /*Hide the navigation list by default*/
+}
+
+.nav-list.active {
+    display: block; /*Show the navigation list when it's active*/
+}
+
+.nav-list li a {
+    color: aliceblue; /*Set text color to aliceblue*/
+    text-decoration: none; /*Remove underline from links*/
+}
+
+.nav-list li a:visited {
+    color: aliceblue; /*Set visited link color to aliceblue*/
+}
+
+.nav-list li a.active {
+    color: #D4AF37; /*Set active link color to gold*/
+    text-decoration: underline; /*Add underline to active links*/
+    font-weight: bold; /*Make active links bold*/
+}
+
+.nav-list li a:hover {
+    color: #D4AF37; /*Set hover link color to gold*/
+    transform: scale(1.1); /*Scale hover links by 10%*/
+    text-decoration: underline; /*Add underline to hover links*/
+}
+
+nav ul li {
+    list-style: none; /*Remove list bullets*/
+    display: inline-block; /*Display list items inline*/
+    margin: 0 15px; /*Add horizontal margin to list items*/
+    font-weight: 550; /*Make list items semi-bold*/
+    transition: color 0.3s ease, transform 0.3s ease; /*Smooth transition for color and transform properties*/
+}
+
+nav ul li:hover {
+    color: #D4AF37; /*Set hover link color to gold*/
+    transform: scale(1.1); /*Scale hover links by 10%*/
+    text-decoration: underline; /*Add underline to hover links*/
+}
+
+.logo {
+    font-size: 24px; /*Set logo font size to 24px*/
+    font-weight: bold; /*Make logo bold*/
+}
+
+.logo a {
+    color: aliceblue; /*Set logo link color to aliceblue*/
+    text-decoration: none; /*Remove underline from logo link*/
+}
+
+.logo a:visited {
+    color: aliceblue; /*Set visited logo link color to aliceblue*/
+}
+
+.logo a:active, .logo a:hover {
+    color: #D4AF37; /* Set active text color */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8); /*Semi-transparent black background*/
+    padding: 20px 0; /*Add padding to footer*/
+    color: aliceblue; /*Set footer text color to aliceblue*/
+    text-align: center; /*Center footer text*/
+    width: 100%; /*Set footer width to 100%*/
+    z-index: 1; /*Ensure footer stays above the video background*/
+    margin-top: auto; /*Push footer to the bottom of the page*/
+}
+
+.footer-content {
+    max-width: 1200px; /*Set maximum width of footer content*/
+    margin: 0 auto; /*Center footer content*/
+    padding: 0 20px; /*Add padding to footer content*/
+} 
+
+.contact-icons a {
+    color: aliceblue; /*Set contact icon text color to aliceblue*/
+    margin: 0 10px; /*Add space between contact icons*/
+    font-size: 24px; /*Set contact icon font size to 24px*/
+    transition: color 0.3s ease, transform 0.3s ease; /*Smooth transition for color and transform*/
+}
+
+.contact-icons a:hover {
+    color: #D4AF37; /*Change icon color to gold on hover*/
+    transform: scale(1.2); /*Scale icon on hover*/
+}
+
+.menu-icon {
+    font-size: 24px; /*Set menu icon font size to 24px*/
+    padding: 20px; /*Add padding to menu icon*/
+    cursor: pointer; /*Change cursor to pointer on hover*/
+    display: block; /*Display menu icon as block element*/
+
+}
+
+.section {
+    position: relative; /*Set section position to relative*/
+    padding: 60px 0; /*Add padding to section*/
+    color: aliceblue; /*Set section text color to aliceblue*/
+    overflow: hidden; /*Hide overflow in section*/
+    min-height: 100vh; /*Ensure section takes at least the full viewport height*/
+}
+
+.about-content {
+    text-align: center; /*Center-align about content text*/
+    position: relative; /*Set about content position to relative*/
+    z-index: 1;
+}
+
+.about-content h2{
+    font-size: 36px; /*Set heading font size to*/
+    color: aliceblue; /*Set heading text color to aliceblue*/
+    margin-bottom: 20px; /*Add spacing below the heading*/
+}
+
+.gold-line {
+    width: 80%; /*Set line width (very long)*/
+    height: 3px; /*Set line height*/
+    background-color: #b38f2b; /*Set line color to gold*/
+    margin: 20px auto; /*Center line horizontally and add spacing*/
+}
+
+.about-content p {
+    font-size: 18px; /*Set paragraph font size to 20px*/
+    color: aliceblue; /*Set paragraph text color to aliceblue*/
+    margin-bottom: 20px; /*Add spacing below the paragraph*/
+    line-height: 1.7; /*Adjust line height to 1.8 for better readability*/
+}
+
+.about-container p {
+    text-align: center; /*Center-align paragraphs*/
+}
+
+.video-background {
+    position: absolute; /*Set video background position to absolute*/
+    top: 0; /*Align to the top*/
+    left: 0; /*Align to the left*/
+    width: 100%; /*Take up full width*/
+    height: 100%; /*Take up full height*/
+    z-index: -1; /*Place video background behind other elements*/
+    overflow: hidden; /*Hide overflow content*/
+    background: black; /*Set fallback background color*/
+}
+
+.video {
+    min-width: 100%; /*Ensure video takes at least the full viewport width*/
+    min-height: 100%; /*Ensure video takes at least the full viewport height*/
+    object-fit: cover; /*Scale video to cover the entire background*/
+}
+
+#scrollDownBtn, #scrollToTopBtn {
+    position: fixed; /*Position scroll down button at the bottom right of the viewport*/
+    right: 20px; /*Position scroll down button 20px from the right of the viewport*/
+    z-index: 1000; /*Set z-index to 1000 to ensure scroll down button is on top of other elements*/
+    padding: 10px 15px; /*Add padding to scroll down button*/
+    font-size: 18px; /*Set font size of scroll down button to 18px*/
+    background-color: #D4AF37; /*Set background color of scroll down button to gold*/
+    color: black; /*Set text color of scroll down button to black*/
+    border: none; /*Remove border from scroll down button*/
+    border-radius: 50%; /*Make scroll down button a circle*/
+    cursor: pointer; /*Change cursor shape on hover*/
+    transition: background-color 0.3s ease, transform 0.3s ease; /*Smooth transition for background color and transform*/
+}
+
+#scrollDownBtn {
+    bottom: 20px; /*Position scroll down button 20px from the bottom of the viewport*/
+}
+
+#scrollToTopBtn {
+    bottom: 80px; /*Position scroll to top button 80px from the bottom of the viewport*/
+    display: none; /*Hide scroll to top button by default*/
+}
+
+#scrollDownBtn:hover, #scrollToTopBtn:hover {
+    background-color: #b38f2b; /*Change background color to darker gold on hover*/
+    transform: scale(1.1); /*Scale scroll down button on hover*/
+}
+
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none; /*Hide menu icon on larger screens*/
+        flex-direction: column;
+    }
+
+    .nav-list {
+        display: flex; /*Display navigation list as a flex container*/
+    }
+
+    .about-container {
+        flex-direction: column; /*Stack about container elements vertically on larger screens*/
+    }
+
+    .about-content {
+        padding-right: 0; /*Remove right padding*/
+        margin-bottom: 40px; /*Increase spacing below about content*/
+    }
+
+}    

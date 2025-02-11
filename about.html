@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="stylesheet3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="homepage.html">Art of Comfort Food</a></h1> <!--webiste logo with a link to homepage-->
+            <nav>
+                <div class="menu-icon" id="menuIcon">&#9776;</div> <!--menu icon (hamburger icon) for mobile navigation-->
+                <ul class="nav-list" id="navList"> <!--unordered list for navigation links-->
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="submit.html">Submit</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="video-background"> <!--Container for the video background-->
+            <video autoplay muted loop class="video" preload="auto" aria-hidden="true"> <!--aria-hidden set true is used to prevent screen readers from focusing on it unnecessarily-->
+                <source src="close up of melted white chocolate sauce being poured onto pile of chocolate brownies on plate_preview.mp4" type="video/mp4" aria-hidden="true">
+                Your browser does not support the video tag. <!--fallback message in case video doesn't work for the user-->
+            </video>
+        </div>
+        <div class="about-content"> <!--container for about content-->
+            <div class="about-container">
+                <h2>About The Art of Comfort Food</h2>
+                <div class="gold-line"></div> <!--decorative line-->
+                <p>Welcome to <strong>The Art of Comfort Food</strong>, where classic flavors meet modern elegance. Our
+                mission is to celebrate the warmth and nostalgia of home-cooked meals while presenting them in a
+                refined, sophisticated way. Whether you're a seasoned chef or a home cook seeking inspiration, our
+                collection of carefully curated recipes is designed to bring comfort to your table.</p> <!--paragraph describing the website's mission-->
+                <p>At <strong>The Art of Comfort Food</strong>, we believe that food is more than just sustenance-it's an
+                experience, a connection to memories, and a form of artistry. Each recipe is crafted with love,
+                highlighting timeless techniques and high-quality ingredients that turn simple dishes into indulgent
+                moments of joy.</p> <!--paragraph about the philosophy of the website-->
+                <p>Designed with a sleek <strong>black, white, and gold</strong> theme, our website embodies the perfect
+                balance of elegance and warmth, mirroring the essence of our recipes. From rich and creamy pastas to
+                heartwarming soups and decadent desserts, we guide you through the steps to create meals that nourish
+                both body and soul.</p> <!--paragraph about the website's design and theme-->
+                <p>Join us on this journey as we explore the beauty of comfort food, one delicious recipe at a time.</p>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2025 The Art of Comfort Food</p> <!--copyright section-->
+            <p>Website designed by <strong>Roua Shoaito</strong></p> <!--website designer credit-->
+            <div class="contact-icons">
+                <p><a href="contact.html">Contact Us</a></p>
+                <a href="mailto:info@theartofcomfortfood.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+1635137" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Go to Top">↑</button> <!--scroll to top button-->
+    <button id="scrollDownBtn" title="Scroll down">↓</button> <!--scroll down button-->
+    <script src="script.js"></script> <!--link for js where here I used it to activate the navigation bar-->
+</body>
+
+</html>

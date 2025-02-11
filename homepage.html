@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="homepage.html">Art of Comfort Food</a></h1>
+            <!--webiste logo with a ink to homepage-->
+            <nav>
+                <div class="menu-icon" id="menuIcon">&#9776;</div>
+                <!--menu icon (hamburger icon) for mobile navigation-->
+                <ul class="nav-list" id="navList"> <!--unordered list for navigation links-->
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="submit.html">Submit</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="home"> <!--Section for the video background-->
+            <video autoplay loop muted playsinline class="video-bg" aria-hidden="true">
+                <!--aria-hidden set true is used to prevent screen readers from focusing on it unnecessarily-->
+                <source
+                    src="cu super slow motion female spreads green butter on bread. shot with high speed camera at 420 fps_preview.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+                <!--fallback message in case video doesn't work for the user-->
+            </video>
+            <div class="hero-section"> <!--Container for introductory info about the page-->
+                <h2>Welcome to The Art of Comfort Food !</h2>
+                <p>Step into a world where food meets comfort, and every dish tells a story of love, warmth, and
+                    togetherness. At The Art of Comfort Food, we celebrate the timeless recipes that bring people closer
+                    —
+                    from hearty casseroles to soul-soothing soups and nostalgic desserts. Whether you're seeking to
+                    recreate
+                    cherished family meals or explore new flavors that feel like home, our collection is designed to
+                    inspire
+                    and satisfy. Join us in mastering the art of comfort, one delicious recipe at a time.
+                </p>
+                <form class="search-box"> <!--Search bar-->
+                    <input type="text" id="searchInput" placeholder="Search Recipe">
+                    <button type="submit">Search</button> <!--Search button-->
+                </form>
+            </div>
+        </section>
+        <section class="recipes" id="recipes"> <!--Recipes section-->
+            <h1>Our Featured Recipes</h1>
+            <div class="recipe-section" id="recipeSection"></div>
+            <!--Container for dynamically loaded recipes using js-->
+        </section>
+
+        <!--Modal for Recipe Details-->
+        <div id="modalOverlay" class="modal-overlay"></div>
+        <div id="recipeModal" class="modal">
+            <button class="close-btn">&times;</button> <!--Close button-->
+
+            <div class="modal-content">
+                <h2 id="modalTitle"></h2>
+                <img id="modalImage" src="" alt="Recipe image">
+                <h3>Ingredients</h3>
+                <p id="modalIngredients"></p>
+                <h3>Instructions</h3>
+                <p id="modalInstructions"></p>
+            </div>
+        </div>
+    </main>
+    <footer id="contact"> <!--Footer section-->
+        <div class="footer-content">
+            <p>&copy; 2025 The Art of Comfort Food</p> <!--copyright section-->
+            <p>Website designed by <strong>Roua Shoaito</strong></p> <!--website designer credit-->
+            <div class="contact-icons">
+                <p><a href="contact.html">Contact Us</a></p>
+                <a href="mailto:info@theartofcomfortfood.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+1635137" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Go to Top">↑</button> <!--scroll to top button-->
+    <button id="scrollDownBtn" title="Scroll down">↓</button> <!--scroll down button-->
+
+    <script src="script.js"></script> <!--script file-->
+</body>
+
+</html>

@@ -1,0 +1,539 @@
+/*General Styles*/
+* {
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+    box-sizing: border-box; /* Include padding and border in width and height */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Set font */
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+    /*width: 100%; /* Set width to full width */
+    /*min-height: 100vh; /* Set minimum height to full viewport height */
+    background-color: aliceblue; /* Set background color */
+    color: black; /* Set text color */
+    line-height: 1.6; /* Set line height for better readability*/
+    /*overflow-x: hidden;*/
+    text-align: center; /* Center text */
+}
+
+/*Navigation*/
+.navbar {
+    display: flex; /* Display as a flexible container */
+    justify-content: space-between; /* Justify content between items */
+    align-items: center; /* Align items vertically */
+    padding: 20px; /* Add padding */
+    background-color: black; /* Set background color */
+    color: aliceblue; /* Set text color */
+}
+
+header {
+    height: 60px; /* Set height */
+    width: 100%; /* Set width to full width */
+    background-color: black; /* Set background color */
+    color: aliceblue; /* Set text color */
+    display: flex; /* Display as flexbox */
+    align-items: center; /* Center vertically */
+    position: sticky; /* Make sticky (stays at the top when scrolling) */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Set z-index to ensure it stays on top */
+}
+
+.container {
+    width: 90%; /* Set width to 90% of parent */
+    margin: 0 auto; /* Center horizontally */
+    display: flex; /* Display as flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+.logo a {
+    color: aliceblue; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+}
+
+.logo a:visited {
+    color: aliceblue; /*Set visited link color to aliceblue*/
+}
+
+.logo a:active, .logo a:hover {
+    color: #D4AF37; /* Set active text color */
+}
+
+.menu-icon {
+    font-size: 24px; /*Set menu icon font size to 24px*/
+    padding: 20px; /*Add padding to menu icon*/
+    cursor: pointer; /*Change cursor shape on hover*/
+    display: block; /*Make menu icon a block element*/
+
+}
+
+.nav-list {
+    list-style: none; /*Remove list bullets*/
+    display: flex; /* Hide by default */
+}
+
+.nav-list.active {
+    display: block; /* Show when active */
+}
+
+.nav-list li a {
+    color: aliceblue; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for smooth animation */
+    font-size: 18px; /* Set font size */
+}
+
+.nav-list li a.active {
+    color: #D4AF37; /* Set active text color */
+    text-decoration: underline; /* Add underline for active */
+    font-weight: bold; /* Make active text bold */
+}
+
+.nav-list li a:hover {
+    color: #D4AF37; /* Set hover text color */
+    transform: scale(1.1); /* Scale up on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+nav ul li {
+    list-style: none; /* Remove bullet list */
+    display: inline; /* Display as inline */
+    margin-right: 20px; /* Add margin for spacing beteen items*/
+    font-weight: 550; /* Set font weight */
+}
+
+.hero {
+    position: relative; /* Set position to relative */
+    width: 100%; /* Set width to full screen */
+    height: 100vh; /* Set height to full screen */
+    overflow: hidden; /* Hide any content that overflows the hero section */
+}
+
+/*video*/
+.video-bg {
+    position: absolute; /* Positions the video absolutely within the hero section */
+    top: 0; /* Align video to the top */
+    left: 0; /* Align video to the left */
+    width: 100%; /* Set width to full screen */
+    height: 100%; /* Set height to full screen */
+    object-fit: cover; /* Ensure video covers the full screen */
+    z-index: -1; /* Place video behind the hero content */
+}
+
+.hero-section {
+    position: relative; /* Positions content relatively within the hero section */
+    z-index: 1; /* Place content in front of the video */
+    text-align: center; /* Center text */
+    color: aliceblue; /* Set text color */
+    padding: 20px; /* Add padding around the content*/
+    display: flex; /* Display content as a flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Set height to full screen */
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+}
+
+.hero h2 {
+    font-size: 30px; /* Set font size */
+    margin-bottom: 10px; /* Add margin below the heading */
+    overflow: hidden; /* Hide any content that overflows the heading */
+    white-space: nowrap; /* Prevent text from wrapping */
+    border-right: 2px solid #D4AF37; /* Add a border to the right */
+    max-width: fit-content;
+    display: inline-block; /*Make the h2 only as ide as its content*/
+    animation: typing 6s steps(40, end), blink-caret 0.75s step-end 6s; /* Add animation */
+}
+
+.hero p {
+    font-size: 20px; /* Set font size */
+    margin-bottom: 20px; /* Add margin below the paragraph */
+    max-width: 800px; /* Limits paragraph width for better readability */
+}
+
+.search-box {
+    max-width: 550px; /* Limits search box width */
+    width: 100%; /* Set width to full parent width */
+    margin: 15px auto; /* Centers the search box horizontally */
+    display: flex; /* Display search box as a flexbox */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    gap: 10px; /* Adds a gap between search box elements */
+}
+
+.search-box input {
+    width: 70%; /* Set input width */
+    padding: 10px; /* Add padding around the input */
+    outline: none; /* Removes default outline */
+    border: 0; /* Removes default border */
+    border-radius: 15px; /* Adds a rounded corner */
+    font-size: 1rem; /* Set font size */
+    background-color: black; /* Set background color */
+    color: aliceblue; /* Set text color */
+}
+
+.search-box input::placeholder {
+    color: #666; /* Set placeholder color to grey */
+}
+
+.search-box button {
+    padding: 10px 20px; /* Add padding inside the button */
+    outline: none; /* Removes default outline */
+    border: 0; /* Removes default border */
+    border-radius: 15px; /* Adds a rounded corner */
+    font-size: 1rem; /* Set font size */
+    background: aliceblue; /* Set background color */
+    color: black; /* Set text color */
+    cursor: pointer; /* Changes cursor to a pointer */
+    transition: background 0.3s ease, transform 0.3s ease; /* Adds a smooth transition effect */
+    animation: pulse 2s infinite; /* Adds a pulsing effect */
+}
+
+.search-box button:hover {
+    background: #D4AF37; /* Changes background color on hover */
+    color: aliceblue; /* Changes text color on hover */
+    transform: scale(1.05); /* Scales the button on hover */
+}
+
+.recipes {
+    padding: 50px 0; /* Adds padding below and above the recipes section */
+    background-color: aliceblue; /* Sets background color */
+}
+
+.recipes h1 {
+    text-align: center; /* Centers the title */
+    margin-bottom: 30px; /* Adds space below the title */
+    font-size: 28px; /* Sets font size */
+    color: black; /* Sets text color */
+}
+
+.recipe-section {
+    width: 90%; /* Sets width */
+    margin: 0 auto; /* Centers the recipe section horizontally */
+    display: grid; /* Uses grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*Creates responsive grid columns*/
+    gap: 20px; /* Adds space between grid items */
+}
+
+.recipe-card {
+    background: aliceblue; /* Sets background color */
+    border-radius: 10px; /* Adds a rounded corner */
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds a smooth transition effect */
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px); /* Shifts the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increases box shadow on hover */
+}
+
+.recipe-card img {
+    width: 100%; /* Sets image width */
+    height: 200px; /* Sets image height */
+    object-fit: cover; /* Ensures image covers the entire box */
+}
+
+.recipe-card h2 {
+    font-size: 22px; /* Sets font size */
+    padding: 20px; /* Adds space around the title */
+    text-align: center; /* Centers the title */
+    color: black; /* Sets text color */
+}
+
+.recipe-card p {
+    font-size: 18px; /* Sets font size */
+    padding: 0 20px 20px; /* Adds space around the text */
+    text-align: center; /* Centers the text */
+    color: black; /* Sets text color */
+}
+
+
+
+.recipe-card .view-recipe-btn {
+    display: block; /* Makes the button a block element */
+    text-align: center; /* Centers the button */
+    background: black; /* Sets background color */
+    color: aliceblue; /* Sets text color */
+    padding: 15px 0; /* Adds space around the button */
+    cursor: pointer; /* Changes cursor to a pointer */
+    transition: background 0.3s ease; 
+    border: none; 
+    width: 100%; 
+    font-size: 16px; /* Sets font size */
+}
+
+.recipe-card .view-recipe-btn:hover {
+    background: #D4AF37; /* Changes background color on hover */
+    color: black; /* Changes text color on hover */
+}
+
+/*Modal*/
+    
+.modal-overlay {
+    position: fixed; /* Positions the modal at the top left of the viewport */
+    top: 0; /* Sets the top position */
+    left: 0; /* Sets the left position */
+    width: 100%; /* Sets the width */
+    height: 100%; /* Sets the height */
+    background: rgba(0, 0, 0, 0.7); /* Sets the background color */
+    backdrop-filter: blur(5px); /* Adds a blur effect */
+    display: none; /* Hide by default */
+    justify-content: center; /* Centers the content */
+    align-items: center; /* Centers the content */
+    z-index: 1000; /* Sets the z-index */
+}
+
+#recipeModal {
+    display: none; /* Hides the modal by default */
+    position: fixed; /* Positions the modal at the top left of the viewport */
+    z-index: 1000; /* Sets the z-index */
+    left: 50%; /* Sets the left position */
+    top: 50%; /* Sets the top position */
+    transform: translate(-50%, -50%); /* Translates the modal to the center */
+    background-color: aliceblue; /* Sets the background color */
+    padding: 20px; /* Adds space around the modal */
+    max-width: 600px; /* Sets the maximum width */
+    width: 80%; /* Sets the width */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+    border-radius: 10px; /* Adds a rounded corner effect */
+    opacity: 0; /* Hides the modal */
+    transition: opacity 0.3s ease; /* Adds a transition effect */
+}
+
+#recipeModal h3 {
+    font-size: 40px; /* Sets the font size */
+    color: #D4AF37; /* Sets the text color */
+    align-items: center; /* Centers the text */
+}
+
+#recipeModal.show-modal {
+    display: block; /* Shows the modal */
+    opacity: 1; /* Shows the modal */
+}
+
+
+#modalOverlay.show-modal {
+    display: block; /* Shows the modal */
+}
+
+.modal {
+    background: black; /* Sets the background color */
+    color: aliceblue; /* Sets the text color */
+    padding: 30px; /* Adds space around the modal */
+    border-radius: 10px; /* Adds a rounded corner effect */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Adds a shadow effect */
+    width: 90%; /* Sets the width */
+    max-width: 600px; /* Sets the maximum width */
+    text-align: center; /* Centers the text */
+    position: relative; /* Positions the modal */
+    animation: fadIn 0.3s ease-in-out; /* Adds a fade-in effect */
+    display: flex; /* Hide by default */
+    flex-direction: column; /* Centers the content */
+    justify-content: center; /* Centers the content */
+    align-items: center; /* Centers the content */
+
+}
+
+.modal-overlay.show-modal {
+    display: flex; /* Show the overlay */
+    justify-content: center; /* Centers the overlay */
+    align-items: center; /* Centers the overlay */
+}
+
+.modal img {
+    width: 100%; /* Sets the width */
+    max-height: 300px; /* Sets the maximum height */
+    object-fit: cover; /* Ensures the image is not distorted */
+    border-radius: 8px; /* Adds a rounded corner effect */
+    margin-bottom: 15px; /* Adds space between the image and the text */
+    display: block; /* Centers the image */
+    margin-left: auto; /* Centers the image */
+    margin-right: auto; /* Centers the image */
+}
+
+.modal h2 {
+    font-size: 50px; /* Sets the font size */
+    color: black; /* Sets the text color */
+    margin-bottom: 15px; /* Adds space between the title and the text */
+    font-weight: bold; /* Sets the font weight */
+}
+
+.modal p {
+    font-size: 30px; /* Sets the font size */
+    margin-bottom: 20px; /* Adds space between the text and the button */
+    color: black; /* Sets the text color */
+}
+
+.close-btn {
+    background: none; /* Removes the background */
+    border: none; /* Removes the border */
+    position: absolute; /* Positions the button */
+    top: 10px; /* Sets the top position */
+    right: 10px; /* Sets the right position */
+    font-size: 30px; /* Sets the font size */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    color: black; /* Sets the text color */
+    z-index: 1010; /* Sets the z-index */
+    padding: 5px; /* Adds padding */
+    transition: color 0.3s ease; /* Adds a transition effect */
+}
+
+.view-recipe-btn {
+    display: block; /* Centers the button */
+    padding: 15px; /* Adds padding */
+    margin-top: 20px; /* Adds space between the button and the text */
+}
+
+.close-btn:hover {
+    color: #b38f2b; /* Changes the text color on hover */
+}
+
+.show-modal {
+    display: block; /* Displays the modal */
+}
+
+.modalContent {
+    position: relative; /* Positions the content */
+    z-index: 1010; /* Sets the z-index */
+}
+
+
+footer {
+    background: black; /* Sets background color */
+    padding: 20px 0; /* Adds space above and below the footer */
+    color: aliceblue; /* Sets text color */
+    text-align: center; /* Centers the text */
+}
+
+.footer-content {
+    max-width: 1200px; /*Set maximum width of footer content*/
+    margin: 0 auto; /*Center footer content*/
+    padding: 0 20px; /*Add padding to footer content*/
+}
+
+.contact-icons {
+    margin-top: 10px; /*Add space between contact icons and footer text*/
+}
+
+.contact-icons a {
+    color: aliceblue; /*Set contact icon text color to aliceblue*/
+    margin: 0 10px; /*Add space between contact icons*/
+    font-size: 24px; /*Set contact icon font size to 24px*/
+    transition: color 0.3s ease, transform 0.3s ease; /*Smooth transition for color and transform*/
+}
+
+.contact-icons a:hover {
+    color: #D4AF37; /*Change icon color to gold on hover*/
+    transform: scale(1.2); /*Scale icon on hover*/
+}
+
+
+#scrollDownBtn, #scrollToTopBtn {
+    position: fixed; /*Position scroll down button at the bottom right of the viewport*/
+    right: 20px; /*Position scroll down button 20px from the right of the viewport*/
+    z-index: 1000; /*Set z-index to 1000 to ensure scroll down button is on top of other elements*/
+    padding: 10px 15px; /*Add padding to scroll down button*/
+    font-size: 18px; /*Set font size of scroll down button to 18px*/
+    background-color: #D4AF37; /*Set background color of scroll down button to gold*/
+    color: black; /*Set text color of scroll down button to black*/
+    border: none; /*Remove border from scroll down button*/
+    border-radius: 50%; /*Make scroll down button a circle*/
+    cursor: pointer; /*Change cursor shape on hover*/
+    transition: background-color 0.3s ease, transform 0.3s ease; /*Smooth transition for background color and transform*/
+}
+
+#scrollDownBtn {
+    bottom: 20px; /*Position scroll down button 20px from the bottom of the viewport*/
+}
+
+#scrollToTopBtn {
+    bottom: 80px; /*Position scroll to top button 80px from the bottom of the viewport*/
+    display: none; /*Hide scroll to top button by default*/
+}
+
+#scrollDownBtn:hover, #scrollToTopBtn:hover {
+    background-color: #b38f2b; /*Change background color to darker gold on hover*/
+    transform: scale(1.1); /*Scale scroll down button on hover*/
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none; /*Hide menu icon on larger screens*/
+    }
+
+    .nav-list {
+        display: flex; /*Display nav list as a flex container*/
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /*Show menu icon on smaller screens*/
+    }
+
+    .nav-list {
+        display: none; /*Hide nav list on smaller screens*/
+    }
+
+    .hero h2 {
+        font-size: 28px; /*Increase font size of hero text on smaller screens*/
+    }
+
+    .hero p {
+        font-size: 16px; /*Decrease font size of hero text on smaller screens*/
+    }
+
+    .recipe-section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*Adjust grid columns on smaller screens*/
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0; /*Start with no width*/
+    }
+    to {
+        width: 100%; /*Expand to full width*/
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /*Hide cursor*/
+    }
+    50% {
+        border-color: #D4AF37; /*Show cursor */
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /*Start and end with normal size*/
+    }
+    50% {
+        transform: scale(1.05); /*Pulse effect*/
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /*Start with no opacity*/
+        transform: scale(0.5); /*Start with smaller size*/
+    }
+    to {
+        opacity: 1; /*End with full opacity*/
+        transform: scale(1); /*End with normal size*/
+    }
+}

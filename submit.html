@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="stylesheet4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="backgroundVideo" preload="auto" aria-hidden="true"> <!--Background video--> <!--aria-hidden set true is used to prevent screen readers from focusing on it unnecessarily-->
+        <source src="super slow motion professional female cook prepares shrimps. throwing and flipping scampi on pan. cooking seafood" type="video/mp4"> 
+        <source src="super slow motion professional female cook prepares shrimps. throwing and flipping scampi on pan. cooking seafood" type="video/webm">
+        Your browser does not support the video tag. <!--fallback message in case video doesn't work for the user-->
+    </video>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="homepage.html">Art of Comfort Food</a></h1> <!--webiste logo with a link to homepage-->
+            <nav>
+                <div class="menu-icon" id="menuIcon">&#9776;</div> <!--menu icon (hamburger icon) for mobile navigation-->
+                <ul class="nav-list" id="navList"> <!--unordered list for navigation links-->
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="submit.html">Submit</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="submit-recipe" id="submit-recipe"> <!--submitting recipes section-->
+        <h2>Submit Your Recipe</h2>
+        <div class="submit-container">
+            <form id="recipeForm" class="recipe-form"> <!--form for submitting a recipe-->
+                <div class="form-group"> <!--form group for recipe name-->
+                    <label for="recipeName">Recipe Name:</label>
+                    <input type="text" id="recipeName" name="recipeName" required>
+                </div>
+                <div class="form-group"> <!--form group for recipe image URL-->
+                    <label for="recipeImage">Recipe Image URL:</label> 
+                    <input type="url" id="recipeImage" name="recipeImage" required>
+                </div>
+                <div class="form-group"> <!--form group for recipe ingredients-->
+                    <label for="recipeIngredients">Ingredients:</label>
+                    <textarea id="recipeIngredients" name="recipeIngredients" rows="4" required></textarea>
+                </div>
+                <div class="form-group"> <!--form group for recipe instructions-->
+                    <label for="recipeInstructions">Instructions:</label>
+                    <textarea id="recipeInstructions" name="recipeInstructions" rows="6" required></textarea>
+                </div>
+                <button type="submit">Submit Recipe</button> <!--submit button-->
+            </form>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2025 The Art of Comfort Food</p> <!--copyright section-->
+            <p>Website designed by <strong>Roua Shoaito</strong></p> <!--website designer credit-->
+            <div class="contact-icons">
+                <p><a href="contact.html">Contact Us</a></p>
+                <a href="mailto:info@theartofcomfortfood.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+1234567890" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Go to Top">↑</button> <!--scroll to top button-->
+    <button id="scrollDownBtn" title="Scroll down">↓</button> <!--scroll down button-->
+    <script src="script.js"></script> <!--link for js where here I used it to activate the navigation bar-->
+</body>
+
+</html>

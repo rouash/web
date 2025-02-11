@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="stylesheet5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="backgroundVideo" preload="auto" aria-hidden="true"> <!--background video--> <!--aria-hidden set true is used to prevent screen readers from focusing on it unnecessarily-->
+        <source src="close up of chef hand holding hot pan and adding salt to it with other hand_preview.mp4" type="video/mp4" aria-hidden="true"> 
+            Your browser does not support the video tag. <!--fallback message in case video doesn't work for the user-->
+    </video>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="homepage.html">Art of Comfort Food</a></h1> <!--website logo with a link to homepage-->
+            <nav>
+                <div class="menu-icon" id="menuIcon">&#9776;</div> <!--menu icon (hamburger icon) for mobile navigation-->
+                <ul class="nav-list" id="navList"> <!--unordered list for navigation links-->
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="submit.html">Submit</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-container"> <!--main content for the contact page-->
+        <h2>Contact Us</h2> <!--heading for the contact section-->
+        <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you!</p> <!--introductory text for the contact section-->
+        <section class="contact-section"> <!--section for the contact form-->
+            <div class="contact-form"> <!--container for the contact form-->
+                <form action="#" method="post" class="recipe-form"> <!--form for submitting a message-->
+                    <div class="form-group"> <!--form group for the name input-->
+                        <label for="name"> Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group"> <!--form group for the email input-->
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group"> <!--form group for the message textarea-->
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button> <!--submit button-->
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2025 The Art of Comfort Food</p> <!--copyright section-->
+            <p>Website designed by <strong>Roua Shoaito</strong></p> <!--website designer credit-->
+            <div class="contact-icons">
+                <p><a href="contact.html">Contact Us</a></p>
+                <a href="mailto:contact@theartofcomfortfood.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+1635137" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Go to Top">↑</button> <!--scroll to top button-->
+    <button id="scrollDownBtn" title="Scroll down">↓</button> <!--scroll down button-->
+    <script src="script.js"></script> <!--link for js where here I used it to activate the navigation bar-->
+</body>
+
+</html>

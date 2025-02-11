@@ -1,0 +1,286 @@
+/*Contact Page*/
+* {
+    padding: 0; /*Remove default padding*/
+    margin: 0; /*Remove default margin*/
+    box-sizing: border-box; /*Include padding and border in width and height*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Set font family*/
+}
+
+body {
+    width: 100%; /*Set width to 100% of the viewport*/
+    min-height: 100vh; /*Ensure body takes at least the full viewport height*/
+    color: aliceblue; /*Set default text color to aliceblue*/
+    line-height: 1.6; /*Set default line height to 1.6 for better readability*/
+    position: relative; /*Make body a relative positioning context*/
+    display: flex; /*Display body as a flexible container*/
+    flex-direction: column; /*Stack elements vertically*/
+}
+
+#backgroundVideo {
+    position: fixed; /*Fix video to the viewport*/
+    top: 0; /*Align to the top*/
+    left: 0; /*Align to the left*/
+    width: 100%; /*Take full width of the viewport*/
+    height: 100%; /*Take full height of the viewport*/
+    object-fit: cover; /*Scale video to cover the entire viewport*/
+    z-index: -1; /*Place video behind other elements*/
+}
+
+header {
+    height: 60px; /*Set header height*/
+    width: 100%; /*Take full width of the viewport*/
+    background-color: rgba(0, 0, 0, 0.8); /*Set header background color to semi-transparent black color*/
+    color: aliceblue; /*Set header text color to aliceblue*/
+    display: flex; /*Display header as a flexible container*/
+    align-items: center; /*Align items vertically in the header*/
+    position: sticky; /*Make header sticky to the top of the viewport*/
+    top: 0; /*Align header to the top of the viewport*/
+    z-index: 1000; /*Place header above other elements*/
+}
+
+.container {
+    width: 90%; /*Take 90% of the viewport width*/
+    margin: 0 auto; /*Center the container horizontally*/
+    display: flex; /*Use flexbox layout*/
+    align-items: center; /*Align items vertically in the container*/
+    justify-content: space-between; /*Space out items evenly*/
+}
+
+.nav-list {
+    display: none; /*Hide navigation list by default*/
+}
+
+.nav-list.active {
+    display: block; /*Show navigation list when active*/
+}
+
+.nav-list li {
+    list-style: none; /*Remove list item markers*/
+    display: inline; /*Display list items inline*/
+    margin-right: 20px; /*Add margin between list items*/
+    font-weight: 550; /*Set font weight to 550*/
+    transition: color 0.3s ease, transform 0.3s ease; /*Smooth transition for color and transform properties*/
+}
+
+.nav-list li a {
+    color: aliceblue; /*Set navigation text color to aliceblue*/
+    text-decoration: none; /*Remove underline from links*/
+}
+
+.nav-list li a:visited {
+    color: aliceblue; /*Set visited navigation text color to aliceblue*/
+}
+
+.nav-list li a.active {
+    color: #D4AF37; /*Set active navigation text color to gold*/
+    text-decoration: underline; /*Add underline to active links*/
+    font-weight: bold; /*Make active links bold*/
+}
+
+.nav-list li a:hover {
+    color: #D4AF37; /*Set hover navigation text color to gold*/
+    transform: scale(1.1); /*Scale hover links to 1.1 times their original size*/
+    text-decoration: underline; /*Add underline to hover links*/
+}
+
+.logo {
+    font-size: 24px; /*Set logo font size to 24px*/
+    font-weight: bold; /*Make logo bold*/
+}
+
+.logo a {
+    color: aliceblue; /*Set logo text color to aliceblue*/
+    text-decoration: none; /*Remove underline from logo*/
+}
+
+.logo a:visited {
+    color: aliceblue; /*Set visited logo text color to aliceblue*/
+}
+
+.logo a:active, .logo a:hover {
+    color: #D4AF37; /* Set active text color */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8); /*Semi-transparent black background*/
+    padding: 20px 0; /*Add padding to footer*/
+    color: aliceblue; /*Set footer text color to aliceblue*/
+    text-align: center; /*Center footer text*/
+    width: 100%; /*Set footer width to 100%*/
+    z-index: 1; /*Ensure footer stays above the video background*/
+    margin-top: auto; /*Push footer to the bottom of the page*/
+}
+
+.footer-content {
+    max-width: 1200px; /*Set maximum width of footer content*/
+    margin: 0 auto; /*Center footer content*/
+    padding: 0 20px; /*Add padding to footer content*/
+}
+
+.contact-icons {
+    margin-top: 10px; /*Add space between contact icons and footer text*/
+}
+
+.contact-icons a {
+    color: aliceblue; /*Set contact icon text color to aliceblue*/
+    margin: 0 10px; /*Add space between contact icons*/
+    font-size: 24px; /*Set contact icon font size to 24px*/
+    transition: color 0.3s ease, transform 0.3s ease; /*Smooth transition for color and transform*/
+}
+
+.contact-icons a:hover {
+    color: #D4AF37; /*Change icon color to gold on hover*/
+    transform: scale(1.2); /*Scale icon on hover*/
+}
+
+.menu-icon {
+    font-size: 24px; /*Set menu icon font size to 24px*/
+    padding: 20px; /*Add padding to menu icon*/
+    cursor: pointer; /*Change cursor to pointer when hovering over menu icon*/
+    display: block; /*Display menu icon as a block element*/
+}
+
+.contact-container {
+    flex: 1; /*Take up equal space in the container*/
+    display: flex; /*Use flexbox layout*/
+    flex-direction: column; /*Stack content vertically*/
+    justify-content: center; /*Center content vertically*/
+    align-items: center; /*Center content horizontally*/
+    min-height: calc(100vh - 80p); /*Ensure container takes at least the full viewport height minus header and footer*/
+    padding: 20px; /*Add padding to container*/
+    position: relative; /*Position container relative to its parent*/
+    z-index: 1; /*Ensure container stays above the video background*/
+}
+
+.contact-container h2 {
+    color: aliceblue; /*Set heading text color to aliceblue*/
+    font-size: 36px; /*Set heading font size to 36px*/
+    text-align: center; /*Center heading text*/
+    margin-bottom: 20px; /*Add spacing below the heading*/
+    font-weight: bold; /*Make heading bold*/
+    padding: 0; /*Remove padding from heading*/
+}
+
+.contact-container p {
+    font-size: larger; /*Set paragraph font size to larger*/
+}
+
+.contact-section {
+    max-width: 800px; /*Set maximum width of the contact section to 800px*/
+    width: 100%; /*Set width to 100% of its parent*/
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /*Semi-transparent gradient background*/
+    padding: 40px; /*Add padding to the contact section*/
+    border-radius: 15px; /*Add rounded corners*/
+    backdrop-filter: blur(10px); /*Add a subtle blur effect to the contact section*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /*Add a subtle box shadow to the contact section for depth*/
+    margin-bottom: 40px; /*Add spacing below the contact section*/
+}
+
+.contact-section h2 {
+    color: aliceblue; /*Set heading text color to aliceblue*/
+    font-size: 36px; /*Set heading font size to 36px*/
+    text-align: center; /*Center heading text*/
+    margin-bottom: 30px; /*Add spacing below the heading*/
+    font-weight: bold; /*Make heading bold*/
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /*Add a subtle text shadow to the heading for better visiblity*/
+}
+
+.recipe-form {
+    max-width: 100%; /*Set maximum width to 100% for the form*/
+    margin: 0 auto; /*Center the form horizontally*/
+}
+
+.form-group {
+    margin-bottom: 30px; /*Add spacing below each form group*/
+}
+
+.form-group label {
+    display: block; /*Display label as a block element*/
+    margin-bottom: 15px; /*Add spacing below the label*/
+    font-weight: bold; /*Make label bold*/
+    color: aliceblue; /*Set label text color to aliceblue*/
+    font-size: 20px; /*Set label font size to 20px*/
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /*Set width to 100% for input and textarea*/
+    padding: 15px; /*Add padding to input and textarea*/
+    border: 1px solid aliceblue; /*Set border color to aliceblue*/
+    border-radius: 8px; /*Add rounded corners to input and textarea*/
+    background-color: rgba(255, 255, 255, 0.1); /*Set background color to a semi-transparent white*/
+    color: #D4AF37; /*Set text color to gold*/
+    font-size: 18px; /*Set font size to 18px*/
+    transition: border-color 0.3s ease, background-color 0.3s ease; /*Add a smooth transition effect for border and background*/
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #b38f2b; /*Change border color to a darker gold on hover*/
+    background-color: rgba(255, 255, 255, 0.2); /*Change background color to a slightly darker semi-transparent white on hover*/
+}
+
+.form-group textarea {
+    resize: vertical; /*Allow vertical resizing of textarea*/
+    min-height: 150px; /*Set minimum height to 150px for textarea*/
+}
+
+.submit-btn {
+    width: 100%; /*Set width to 100% for the submit button*/
+    padding: 15px; /*Add padding to the submit button*/
+    background-color: #D4AF37; /*Set background color to gold*/
+    color: black; /*Set text color to black*/
+    border: none; /*Remove border from the submit button*/
+    border-radius: 8px; /*Add rounded corners to the submit button*/
+    font-size: 20px; /*Set font size to 20px for the submit button*/
+    font-weight: bold; /*Make the submit button bold*/
+    cursor: pointer; /*Change cursor to a pointing hand on hover*/
+    transition: background-color 0.3s ease; /*Add a smooth transition effect for background color*/
+}
+
+.submit-btn:hover {
+    background-color: #b38f2b; /*Change background color to a darker gold on hover*/
+}
+
+#scrollDownBtn, #scrollToTopBtn {
+    position: fixed; /*Position scroll down button at the bottom right of the viewport*/
+    right: 20px; /*Position scroll down button 20px from the right of the viewport*/
+    z-index: 1000; /*Set z-index to 1000 to ensure scroll down button is on top of other elements*/
+    padding: 10px 15px; /*Add padding to scroll down button*/
+    font-size: 18px; /*Set font size of scroll down button to 18px*/
+    background-color: #D4AF37; /*Set background color of scroll down button to gold*/
+    color: black; /*Set text color of scroll down button to black*/
+    border: none; /*Remove border from scroll down button*/
+    border-radius: 50%; /*Make scroll down button a circle*/
+    cursor: pointer; /*Change cursor shape on hover*/
+    transition: background-color 0.3s ease, transform 0.3s ease; /*Smooth transition for background color and transform*/
+}
+
+#scrollDownBtn {
+    bottom: 20px; /*Position scroll down button 20px from the bottom of the viewport*/
+}
+
+#scrollToTopBtn {
+    bottom: 80px; /*Position scroll to top button 80px from the bottom of the viewport*/
+    display: none; /*Hide scroll to top button by default*/
+}
+
+#scrollDownBtn:hover, #scrollToTopBtn:hover {
+    background-color: #b38f2b; /*Change background color to darker gold on hover*/
+    transform: scale(1.1); /*Scale scroll down button on hover*/
+}
+
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none; /*Hide the menu icon on larger screens*/
+    }
+
+    .nav-list {
+        display: flex; /*Display the navigation list as a flexbox on larger screens*/
+    }
+
+    .contact-section {
+        padding: 20px; /*Reduce padding to the contact section on larger screens*/
+    }
+
+}
