@@ -372,7 +372,7 @@ function openModal(recipe) {
     modalOverlay.classList.add('show-modal');
 
     //prevent background scroll
-    document.bidy.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
 
     //close modal when close button is clicked
     closeModalBtn.addEventListener('click', closeModal);
